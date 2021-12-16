@@ -12,28 +12,26 @@ async function getUrls() {
 
   itens.push(
     await get(
-      "https://tax.adventistas.org/pt/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=20"
+      "https://tax.adventistas.org/pt/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=150"
     )
   );
   itens.push(
     await get(
-      "https://tax.adventistas.org/es/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=20"
+      "https://tax.adventistas.org/es/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=150"
     )
   );
-
-  var teste = [];
 
   const pt = itens[0].map((item) => {
     return [
       `http://${item.slug}.adventistas.org/wp-content/themes/pa-theme-sedes/style.css`,
-      `http://${item.slug}.adventistas.org/wp-content/themes/pa-theme-sedes-child/style.css`,
+      // `http://${item.slug}.adventistas.org/wp-content/themes/pa-theme-sedes-child/style.css`,
     ];
   });
 
   const es = itens[1].map((item) => {
     return [
       `http://${item.slug}.adventistas.org/wp-content/themes/pa-theme-sedes/style.css`,
-      `http://${item.slug}.adventistas.org/wp-content/themes/pa-theme-sedes-child/style.css`,
+      // `http://${item.slug}.adventistas.org/wp-content/themes/pa-theme-sedes-child/style.css`,
     ];
   });
 
@@ -102,6 +100,7 @@ async function getFile(url) {
 
 async function geral() {
   const urls = await getUrls();
+
   const items = await Promise.all(
     urls.map(async (url) => {
       const version_1 = await getFile(url[0]);
