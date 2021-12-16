@@ -12,12 +12,12 @@ async function getUrls() {
 
   itens.push(
     await get(
-      "https://tax.adventistas.org/pt/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=150"
+      "https://tax.adventistas.org/pt/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=20"
     )
   );
   itens.push(
     await get(
-      "https://tax.adventistas.org/es/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=150"
+      "https://tax.adventistas.org/es/wp-json/wp/v2/xtt-pa-sedes?_fields=slug&per_page=20"
     )
   );
 
