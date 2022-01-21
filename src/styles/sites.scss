@@ -1,0 +1,51 @@
+section.site-list {
+  margin: 40px;
+
+  h1 {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding: 8px;
+    display: block;
+  }
+
+  .ERRO {
+    color: red;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+    }
+
+    td + td,
+    th {
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    tr:hover {
+      background-color: #646569;
+      color: #dddddd;
+
+      a {
+        color: #dddddd;
+      }
+    }
+  }
+}
