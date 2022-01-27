@@ -12,6 +12,7 @@ section.site-list {
     width: 100%;
     padding: 8px;
     display: block;
+    font-weight: bold;
   }
 
   .ERRO {
@@ -46,6 +47,10 @@ section.site-list {
       a {
         color: #dddddd;
       }
+    }
+
+    .children {
+      font-weight: 400;
     }
   }
 }

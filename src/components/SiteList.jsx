@@ -1,135 +1,126 @@
+import React from "react";
 import { SiteItem } from "./SiteItem";
-import '../styles/sites.scss';
+import "../styles/sites.scss";
+import react from "react";
 
-export function SiteList(){
+export function SiteList() {
+  const sedes = [
+    {
+      sede: "ucb",
+      children: ["apac", "apv", "apl", "apo", "apse", "apso", "aps", "ap"],
+    },
+    {
+      sede: "ucob",
+      children: ["abc", "alm", "amt", "aplac", "asm", "mto", "misom"],
+    },
+    {
+      sede: "ulb",
+      children: ["ab", "abac", "abn", "abs", "mbs", "ms"],
+    },
+    {
+      sede: "uneb",
+      children: ["ace", "ape", "apec", "misal", "mne", "mpi"],
+    },
+    {
+      sede: "unob",
+      children: ["aamar", "aamo", "aceam", "asur"],
+    },
+    {
+      sede: "unb",
+      children: ["ama", "anpa", "aspa", "asuma", "mnem", "mopa", "mpa"],
+    },
+    {
+      sede: "useb",
+      children: [
+        "aes",
+        "amc",
+        "aml",
+        "ams",
+        "arj",
+        "arf",
+        "ars",
+        "ases",
+        "mmn",
+        "mmo",
+      ],
+    },
+    {
+      sede: "usb",
+      children: [
+        "ac",
+        "acp",
+        "acsr",
+        "ansr",
+        "anc",
+        "anp",
+        "aop",
+        "asp",
+        "asr",
+      ],
+    },
+    {
+      sede: "ua",
+      children: ["aac", "aan", "aas", "abo", "maco", "mano", "mibon-ua"],
+    },
+    {
+      sede: "ub",
+      children: ["mbc", "mbo", "mob"],
+    },
+    {
+      sede: "uch",
+      children: ["acsch", "amch", "asach", "mcch", "mchp", "mnch", "msmch"],
+    },
+    {
+      sede: "ue",
+      children: ["men", "mes"],
+    },
+    {
+      sede: "up",
+      children: [],
+    },
+    {
+      sede: "upn",
+      children: ["anop", "apce", "micop", "mno", "mpn"],
+    },
+    {
+      sede: "ups",
+      children: ["apc", "mac", "mlt", "mop", "mpcs", "mps", "msop"],
+    },
+    {
+      sede: "uu",
+      children: [],
+    },
+  ];
 
-    const sedes = [
-        'aamar',
-        'aamo',
-        'ab',
-        'abac',
-        'abn',
-        'abs',
-        'abc',
-        'ac',
-        'ace',
-        'aceam',
-        'acp',
-        'acsr',
-        'aes',
-        'alm',
-        'ama',
-        'amt',
-        'amc',
-        'aml',
-        'ams',
-        'anpa',
-        'ansr',
-        'anc',
-        'anp',
-        'aop',
-        'apac',
-        'apv',
-        'apl',
-        'apo',
-        'apse',
-        'apso',
-        'aps',
-        'ap',
-        'ape',
-        'apec',
-        'aplac',
-        'arj',
-        'arf',
-        'ars',
-        'asur',
-        'aspa',
-        'ases',
-        'asm',
-        'asp',
-        'asr',
-        'misal',
-        'mbs',
-        'mto',
-        'mmn',
-        'mmo',
-        'mne',
-        'mnem',
-        'mnsr',
-        'mopa',
-        'misom',
-        'mpa',
-        'mpi',
-        'ms',
-        'msma',
-        'ucb',
-        'ucob',
-        'ulb',
-        'uneb',
-        'unob',
-        'unb',
-        'useb',
-        'usb',
-        'aac',
-        'aan',
-        'aas',
-        'abo',
-        'acsch',
-        'amch',
-        'anop',
-        'apc',
-        'apce',
-        'asach',
-        'mac',
-        'maco',
-        'mano',
-        'mbc',
-        'mbo',
-        'mibon',
-        'mcch',
-        'micop',
-        'mchp',
-        'mlt',
-        'mob',
-        'mop',
-        'men',
-        'mes',
-        'mno',
-        'mnch',
-        'mpcs',
-        'mpn',
-        'mps',
-        'msmch',
-        'msop',
-        'ua',
-        'ub',
-        'uch',
-        'ue',
-        'up',
-        'upn',
-        'upsur',
-        'uu',
-      ];
-      
-    return (
-        <section className="site-list">
-            <h1>Versão do thema</h1>
+  return (
+    <section className="site-list">
+      <h1>Versão do thema</h1>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Campo:</th>
-                        <th>Parent:</th>
-                        <th>Child:</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    {sedes.map((item) => <SiteItem key={item} site={item} /> )}
-
-                </tbody>
-
-                </table>
-        </section>
-    );
+      <table>
+        <thead>
+          <tr>
+            <th>Campo:</th>
+            <th>Parent:</th>
+            <th>Child:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sedes.map((item, index) => {
+            return (
+              <React.Fragment key={`${item.sede}`}>
+                <SiteItem site={item.sede} />
+                {item.children.map((children) => (
+                  <SiteItem
+                    key={children}
+                    site={children}
+                    children={true}
+                  />
+                ))}
+              </React.Fragment>
+            );
+          })}
+        </tbody>
+      </table>
+    </section>
+  );
 }
