@@ -105,16 +105,12 @@ export function SiteList() {
           </tr>
         </thead>
         <tbody>
-          {sedes.map((item, index) => {
+          {sedes.map((item) => {
             return (
               <React.Fragment key={`${item.sede}`}>
                 <SiteItem site={item.sede} />
                 {item.children.map((children) => (
-                  <SiteItem
-                    key={children}
-                    site={children}
-                    children={true}
-                  />
+                  <SiteItem key={children} site={children} children={true} />
                 ))}
               </React.Fragment>
             );
