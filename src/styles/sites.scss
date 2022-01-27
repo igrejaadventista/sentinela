@@ -19,11 +19,20 @@ section.site-list {
     color: red;
   }
 
+  .ok {
+    color: green;
+  }
+
   table {
     border-collapse: collapse;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+
+    td {
+      // Descomentar essa linha caso deseje que os itens que não estão com a versão correta do thema seja sinalizado
+      //color: red;
+    }
 
     td,
     th {
@@ -41,11 +50,15 @@ section.site-list {
     }
 
     tr:hover {
-      background-color: #646569;
+      background-color: #828282;
       color: #dddddd;
 
       a {
         color: #dddddd;
+      }
+
+      .ok {
+        color: #5dff5e;
       }
     }
 

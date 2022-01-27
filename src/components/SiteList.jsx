@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { SiteItem } from "./SiteItem";
+import { ReferenceItem } from "./ReferenceItem";
 import "../styles/sites.scss";
-import react from "react";
 
 export function SiteList() {
   const sedes = [
@@ -92,25 +92,35 @@ export function SiteList() {
     },
   ];
 
+  const [version, setVersion] = useState([]);
+
+  function Reference(ref) {
+    setVersion({
+      parent: ref.parent,
+      child: ref.child,
+    });
+  }
+
   return (
     <section className="site-list">
       <h1>Versão do thema</h1>
 
       <table>
         <thead>
-          <tr>
-            <th>Campo:</th>
-            <th>Parent:</th>
-            <th>Child:</th>
-          </tr>
+          <ReferenceItem getReference={Reference} />
         </thead>
         <tbody>
           {sedes.map((item) => {
             return (
               <React.Fragment key={`${item.sede}`}>
-                <SiteItem site={item.sede} />
+                <SiteItem site={item.sede} version={version} />
                 {item.children.map((children) => (
-                  <SiteItem key={children} site={children} children={true} />
+                  <SiteItem
+                    key={children}
+                    site={children}
+                    children={true}
+                    version={version}
+                  />
                 ))}
               </React.Fragment>
             );
