@@ -16,7 +16,7 @@ export function ReferenceItem(props) {
 
   return (
     <tr>
-      <th>Campo</th>
+      <th>Campo:</th>
       <th>Parent: {info?.parent}</th>
       <th>Child: {info?.child}</th>
     </tr>

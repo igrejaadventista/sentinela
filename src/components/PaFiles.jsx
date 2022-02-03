@@ -1,0 +1,70 @@
+export function PaFiles(props) {
+  return (
+    <>
+      <h1>PA Files</h1>
+      <table className="files">
+        <thead>
+          <tr>
+            <th>Themes: </th>
+            <th>Plugin:</th>
+            <th>WP:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a
+                target="_blank"
+                href="https://files.internetdsa.com/themes/pa-theme-sedes-child.zip"
+              >
+                pa-theme-sedes-child.zip
+              </a>
+            </td>
+            <td>
+              <a
+                target="_blank"
+                href="https://files.internetdsa.com/plugins/advanced-custom-fields-pro.zip"
+              >
+                advanced-custom-fields-pro.zip
+              </a>
+            </td>
+            <td>
+              <a
+                target="_blank"
+                href="https://files.internetdsa.com/wp/pt_BR.zip"
+              >
+                pt_BR.zip
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                target="_blank"
+                href="https://files.internetdsa.com/themes/pa-theme-sedes.zip"
+              >
+                pa-theme-sedes.zip
+              </a>
+            </td>
+            <td>
+              <a
+                target="_blank"
+                href="https://files.internetdsa.com/plugins/cloudflare.zip"
+              >
+                cloudflare.zip
+              </a>
+            </td>
+            <td>
+              <a
+                target="_blank"
+                href="https://files.internetdsa.com/wp/es_ES.zip"
+              >
+                es_ES.zip
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </>
+  );
+}
