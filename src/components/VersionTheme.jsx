@@ -103,7 +103,7 @@ export function VersionTheme(props) {
 
   return (
     <>
-      <h1>Version do theme</h1>
+      <h1>Theme versions</h1>
       <table>
         <thead>
           <ReferenceItem getReference={Reference} />
