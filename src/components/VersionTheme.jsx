@@ -23,7 +23,7 @@ export function VersionTheme(props) {
     },
     {
       sede: "unob",
-      children: ["aamar", "aamo", "aceam", "asur"],
+      children: ["aamar", "anra", "aceam", "asur"],
     },
     {
       sede: "unb",
