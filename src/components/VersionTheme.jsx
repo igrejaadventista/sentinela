@@ -83,7 +83,7 @@ export function VersionTheme(props) {
       children: ["anop", "apce", "micop", "mno", "mpn"],
     },
     {
-      sede: "ups",
+      sede: "upsur",
       children: ["apc", "mac", "mlt", "mop", "mpcs", "mps", "msop"],
     },
     {
