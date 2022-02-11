@@ -60,7 +60,7 @@ export function VersionTheme(props) {
     },
     {
       sede: "ua",
-      children: ["aac", "aan", "aas", "abo", "maco", "mano", "mibon-ua"],
+      children: ["aac", "aan", "aas", "abo", "maco", "mano", "mibon"],
     },
     {
       sede: "ub",
