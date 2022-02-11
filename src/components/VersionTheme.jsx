@@ -15,7 +15,7 @@ export function VersionTheme(props) {
     },
     {
       sede: "ulb",
-      children: ["ab", "abac", "abn", "abs", "mbs", "ms"],
+      children: ["ab", "abac", "abn", "abs", "mbso", "mse"],
     },
     {
       sede: "uneb",
