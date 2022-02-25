@@ -10,7 +10,6 @@ section.site-list {
     text-decoration: none;
     color: black;
     width: 100%;
-    padding: 8px;
     display: block;
     font-weight: bold;
   }
@@ -42,10 +41,11 @@ section.site-list {
     th {
       border: 1px solid #dddddd;
       text-align: left;
+      padding: 8px;
     }
 
     tr:nth-child(even) {
-      background-color: #f3f3f3;
+      background-color: #dddddd;
     }
 
     thead {

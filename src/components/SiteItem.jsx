@@ -21,15 +21,27 @@ export function SiteItem(props) {
           {info?.headquarter
             ? info.headquarter
             : info?.errorMessage
-            ? `${props.site} - falha  `
-            : `Carregando...`}
+              ? `${props.site} - falha  `
+              : `Carregando...`}
         </a>
       </td>
       <td className={props?.version?.parent == info?.parent ? "ok" : ""}>
-        {info?.parent} {props?.version?.parent == info?.parent && "✅"}
+        <a
+          href={`http://${props.site}.adventistas.org/wp-content/themes/pa-theme-sedes/style.css`}
+          target="_blank"
+          className={props?.children && "children"}
+        >
+          {info?.parent} {props?.version?.parent == info?.parent && "✅"}
+        </a>
       </td>
       <td className={props?.version?.child == info?.child ? "ok" : ""}>
-        {info?.child} {props?.version?.child == info?.child && "✅"}
+        <a
+          href={`http://${props.site}.adventistas.org/wp-content/themes/pa-theme-sedes-child/style.css`}
+          target="_blank"
+          className={props?.children && "children"}
+        >
+          {info?.child} {props?.version?.child == info?.child && "✅"}
+        </a>
       </td>
     </tr>
   );
