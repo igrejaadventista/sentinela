@@ -106,7 +106,10 @@ export function PaFiles(props) {
           </tr>
           <tr>
             <td>
-              <a href="/template_slider_pa.psd" target="_blank" download>
+              <a
+                href="https://www.dropbox.com/s/vfxcy1c1jnfeusj/Template_Slider_PA.psd?dl=0"
+                target="_blank"
+              >
                 Slider
               </a>
             </td>
