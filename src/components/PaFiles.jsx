@@ -22,10 +22,31 @@ export function PaFiles(props) {
               </a>
             </td>
             <td>Tema pai</td>
-            <td>&nbsp;</td>
+            <td>Novo - Tema pai compatível com PHP 8.0 ou superior</td>
             <td>
               <a
                 href="https://github.com/igrejaadventista/pa-theme-sedes/blob/master/CHANGELOG.md"
+                target="_blank"
+              >
+                link
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/pa-thema-sedes-old/pa-theme-sedes.zip"
+                target="_blank"
+                download
+              >
+                pa-theme-sedes.zip
+              </a>
+            </td>
+            <td>Tema pai</td>
+            <td>Antigo - Tema pai compatível com PHP 7.4</td>
+            <td>
+              <a
+                href="/pa-thema-sedes-old/CHANGELOG.md"
                 target="_blank"
               >
                 link
