@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export function SiteItem(props) {
   const [info, setInfo] = useState([]);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     fetch(`https://api.adventistas.dev/get-theme-version?s=${props.site}`)
@@ -9,6 +10,23 @@ export function SiteItem(props) {
       .then((data) => setInfo(data))
       .catch((error) => console.log("Deu ruim"));
   }, []);
+
+  useEffect(() => {
+    if (props.searchTerm) {
+      const searchValue = props.searchTerm.toLowerCase();
+      const headquarter = info?.headquarter?.toLowerCase() || '';
+      const site = props.site.toLowerCase();
+      
+      setIsVisible(
+        headquarter.includes(searchValue) || 
+        site.includes(searchValue)
+      );
+    } else {
+      setIsVisible(true);
+    }
+  }, [props.searchTerm, info]);
+
+  if (!isVisible) return null;
 
   return (
     <tr>
