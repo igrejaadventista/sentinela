@@ -110,6 +110,7 @@ export function VersionTheme(props) {
                   <SiteItem
                     key={children}
                     site={children}
+                    displayName={`${children} - ${children.toUpperCase()}`}
                     children={true}
                     version={version}
                     searchTerm={searchTerm}
